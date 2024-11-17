@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Ticker : MonoBehaviour
 {
-    public static float tickTime = 0.2f;
+    public static float tickTime = 0.1f;
 
     private float _tickTimer;
 

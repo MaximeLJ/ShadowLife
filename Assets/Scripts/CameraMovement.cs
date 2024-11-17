@@ -45,6 +45,7 @@ public class CameraMovement : MonoBehaviour
 
         oldCameraPosition = player.position;
         lastPlayerPosition = player.position;
+        transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
     }
 
     void Update()
