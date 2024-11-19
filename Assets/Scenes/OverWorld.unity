@@ -221,16 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 421592747}
-  walkDown: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkDownRight: {fileID: 0}
-  walkUpRight: {fileID: 0}
-  idleDown: {fileID: 0}
-  idleUp: {fileID: 0}
-  idleRight: {fileID: 0}
-  idleDownRight: {fileID: 0}
-  idleUpRight: {fileID: 0}
+  animator: {fileID: 0}
   moveSpeed: 5
 --- !u!50 &293750630
 Rigidbody2D:
@@ -680,16 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 421592747}
-  walkDown: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkRight: {fileID: 9100000, guid: 94a7b8d4ea30c41a7b5fb2e1af1cfd41, type: 2}
-  walkDownRight: {fileID: 9100000, guid: 248895b85ab4c43048d92df0433bda54, type: 2}
-  walkUpRight: {fileID: 9100000, guid: 2994e9553fc844fc2bd1f3cef713aa6a, type: 2}
-  idleDown: {fileID: 0}
-  idleUp: {fileID: 0}
-  idleRight: {fileID: 9100000, guid: 94a7b8d4ea30c41a7b5fb2e1af1cfd41, type: 2}
-  idleDownRight: {fileID: 9100000, guid: 248895b85ab4c43048d92df0433bda54, type: 2}
-  idleUpRight: {fileID: 9100000, guid: 2994e9553fc844fc2bd1f3cef713aa6a, type: 2}
+  animator: {fileID: 1413834318}
   moveSpeed: 3
 --- !u!1 &1449833302
 GameObject:
