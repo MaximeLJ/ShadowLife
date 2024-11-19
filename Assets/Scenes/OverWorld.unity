@@ -221,13 +221,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 421592747}
-  walkFront: {fileID: 0}
-  walkBack: {fileID: 0}
+  walkDown: {fileID: 0}
+  walkUp: {fileID: 0}
   walkRight: {fileID: 0}
   walkDownRight: {fileID: 0}
   walkUpRight: {fileID: 0}
-  idleFront: {fileID: 0}
-  idleBack: {fileID: 0}
+  idleDown: {fileID: 0}
+  idleUp: {fileID: 0}
   idleRight: {fileID: 0}
   idleDownRight: {fileID: 0}
   idleUpRight: {fileID: 0}
@@ -558,7 +558,7 @@ Animator:
   m_GameObject: {fileID: 1413834317}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 94a7b8d4ea30c41a7b5fb2e1af1cfd41, type: 2}
+  m_Controller: {fileID: 9100000, guid: bb8ef4776b0c6488d8f72602c74ad8f7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -680,17 +680,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 421592747}
-  walkFront: {fileID: 9100000, guid: a068fc6c16fc44a2fab635d3c84e487c, type: 2}
-  walkBack: {fileID: 9100000, guid: 5662db0e6ea9446a9a1fd49129ca9cba, type: 2}
+  walkDown: {fileID: 0}
+  walkUp: {fileID: 0}
   walkRight: {fileID: 9100000, guid: 94a7b8d4ea30c41a7b5fb2e1af1cfd41, type: 2}
   walkDownRight: {fileID: 9100000, guid: 248895b85ab4c43048d92df0433bda54, type: 2}
   walkUpRight: {fileID: 9100000, guid: 2994e9553fc844fc2bd1f3cef713aa6a, type: 2}
-  idleFront: {fileID: 9100000, guid: a068fc6c16fc44a2fab635d3c84e487c, type: 2}
-  idleBack: {fileID: 9100000, guid: 5662db0e6ea9446a9a1fd49129ca9cba, type: 2}
+  idleDown: {fileID: 0}
+  idleUp: {fileID: 0}
   idleRight: {fileID: 9100000, guid: 94a7b8d4ea30c41a7b5fb2e1af1cfd41, type: 2}
   idleDownRight: {fileID: 9100000, guid: 248895b85ab4c43048d92df0433bda54, type: 2}
   idleUpRight: {fileID: 9100000, guid: 2994e9553fc844fc2bd1f3cef713aa6a, type: 2}
-  moveSpeed: 5
+  moveSpeed: 3
 --- !u!1 &1449833302
 GameObject:
   m_ObjectHideFlags: 0
