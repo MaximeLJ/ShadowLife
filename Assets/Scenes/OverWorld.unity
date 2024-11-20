@@ -220,9 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1e0a1d7c9e04e6a919b5acc9316953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 421592747}
+  gameManager: {fileID: 0}
   animator: {fileID: 0}
   moveSpeed: 5
+  transitionDampTime: 0
 --- !u!50 &293750630
 Rigidbody2D:
   serializedVersion: 5
@@ -605,12 +606,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -627400356, guid: e9de10ef55f134ad3a9a2a9fb3df0a53, type: 3}
+  m_Sprite: {fileID: 7815269939835858627, guid: 99b8397b03d154133b712d342be2962f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2.0625}
+  m_Size: {x: 1.375, y: 2.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -670,9 +671,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1e0a1d7c9e04e6a919b5acc9316953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 421592747}
+  gameManager: {fileID: 0}
   animator: {fileID: 1413834318}
   moveSpeed: 3
+  transitionDampTime: 0.05
 --- !u!1 &1449833302
 GameObject:
   m_ObjectHideFlags: 0
