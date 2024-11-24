@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,8 +15,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Transform player;
 
-    private Dictionary<Vector2, AnimatorController> walkAnimations;
-    private Dictionary<Vector2, AnimatorController> idleAnimations;
 
     private void OnEnable()
     {
@@ -38,10 +35,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         inputDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        animator.SetFloat("Speed", inputDirection.sqrMagnitude);
 
         // Update the animator parameters only when there is significant movement
         if (inputDirection.sqrMagnitude > 0.1f) {
-            animator.SetFloat("Speed", inputDirection.sqrMagnitude);
             animator.SetFloat("Horizontal", inputDirection.x, transitionDampTime, Time.deltaTime);
             animator.SetFloat("Vertical", inputDirection.y, transitionDampTime, Time.deltaTime);
         } else {
@@ -49,13 +46,10 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Horizontal", lastDirection.x);
             animator.SetFloat("Vertical", lastDirection.y);
         }
-    }
-
-    void FixedUpdate()
-    {
+        
         rb.linearVelocity = moveSpeed * inputDirection.normalized;
     }
-
+    
     private void Tick()
     {
         if (inputDirection.sqrMagnitude > 0.1f) {

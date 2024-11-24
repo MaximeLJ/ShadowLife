@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 public class CameraMovement : MonoBehaviour
 {
     public GameManager gameManager;
+    public int optimalPixels;
+    public int pixelsPerUnit;
 
     private Transform cameraTransform;
     private Camera _camera;
@@ -67,11 +69,21 @@ public class CameraMovement : MonoBehaviour
             oldCameraPosition.y = playerPosition.y;
         }
 
+        
         // Only update camera position if the player has moved
         if (playerPosition.x != lastPlayerPosition.x || playerPosition.y != lastPlayerPosition.y)
         {
             cameraTransform.position = new Vector3(playerPosition.x, playerPosition.y, cameraTransform.position.z);
             lastPlayerPosition = playerPosition;
+
+            /*
+            int i_x = Mathf.FloorToInt(cameraTransform.localPosition.x * (float)pixelsPerUnit);
+            int i_y = Mathf.FloorToInt(cameraTransform.localPosition.y * (float)pixelsPerUnit);
+            int i_z = Mathf.FloorToInt(cameraTransform.localPosition.z * (float)pixelsPerUnit);
+            //Vector3 oldPos = transform.localPosition;
+            Vector3 p = new Vector3((float)i_x / (float)pixelsPerUnit, (float)i_y / (float)pixelsPerUnit, (float)i_z / (float)pixelsPerUnit);
+            
+            transform.localPosition = p;*/
         }
     }
 
@@ -82,13 +94,14 @@ public class CameraMovement : MonoBehaviour
     }
 
     (Vector2Int, Vector2Int) DefineMapSize()
-    {
+    {        
         int height = (int)(2f * _camera.orthographicSize);
         int width = (int)(height * _camera.aspect);
         Vector2Int newMapSize = new Vector2Int(width + proceduralMap.cameraMargin, height + proceduralMap.cameraMargin);
         if (mapSize != newMapSize) {
             proceduralMap.UpdatePerlinNoise(newMapSize+2*Vector2Int.one, GetWorldPos2D(player.position));
         }
+
         return (newMapSize,  new Vector2Int((newMapSize.x + 1) / 2, (newMapSize.y + 1) / 2));
     }
 
