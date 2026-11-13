@@ -1,0 +1,1 @@
+This simple game, features a pixelated character that can explore an infinitely expanding generated terrain, using a dual grid system invented by Oskar Stålberg. Right click to place dirt, left click to place water. 
